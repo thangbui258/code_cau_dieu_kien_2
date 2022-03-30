@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+</head>
+<body>
+<h1>DO YOU LOVE ME</h1>
+<input type="button" value="Yes" onclick="yes()">
+<input type="button" value="No" id="no">
+<p id="thong_bao"></p>
+<script>
+
+    function yes() {
+        document.getElementById("thong_bao").innerHTML = "<3"
+    }
+
+    let no = document.getElementById("no");
+
+    function viTri_no() {
+        no.style.position = 'relative';
+        no.style.left = '0px';
+        no.style.top = '0px';
+    }
+
+    viTri_no()
+    no.onmouseover = function () {
+        let left = parseInt(Math.random() * window.innerWidth);
+        let top = parseInt(Math.random() * window.innerHeight);
+
+        document.getElementById("no").style.left = left + "px"
+        document.getElementById("no").style.top = top + "px"
+    }
+
+
+</script>
+</body>
+</html>

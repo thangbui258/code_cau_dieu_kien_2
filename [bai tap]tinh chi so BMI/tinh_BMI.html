@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+    <h2>TINH CHI SO BMI CO THE</h2>
+    <p>Moi nhap chieu cao: <input id="chieucao" type="text" name="chieuCao"> </p>
+    <p>Moi nhap can nang: <input id="cannang" type="text" name="canNang"></p>
+    <p><input type="button" value="BMI" onclick="BMI()"></p>
+    <p id="kq"></p>
+    <script>
+        function BMI() {
+            let chieucao = +document.getElementById('chieucao').value;
+            let cannang = +document.getElementById('cannang').value;
+            let BMI = cannang / (chieucao * chieucao);
+            document.getElementById('kq').innerHTML = 'chi so BMI: ' + BMI;
+        }
+
+
+    </script>
+</body>
+</html>

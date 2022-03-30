@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyen nobita</title>
+</head>
+<body>
+<img id="nobita" src="img/1.png" alt="anh nobita">
+<script>
+    let x = null;
+    x = document.getElementById("nobita");
+
+    function viTri_nobita() {
+        x.style.position = 'relative';
+        x.style.left = '0px';
+        x.style.top = '0px';
+    }
+    viTri_nobita();
+    window.addEventListener('keydown', moveNobita);
+    function moveNobita(abc) {
+        let left = x.style.left
+        let top = x.style.top
+        let trai_phai;
+        let len_xuong;
+        switch (abc.key) {
+            case 'a':
+                trai_phai = parseInt(left) - 10;
+                break;
+            case 'd':
+                trai_phai = parseInt(left) + 10;
+                break;
+            case 's':
+                len_xuong = parseInt(top) + 10;
+                break;
+            case 'w':
+                len_xuong = parseInt(top) - 10;
+                break;
+        }
+        x.style.left = trai_phai + "px"
+        x.style.top = len_xuong + "px"
+
+
+    }
+
+
+</script>
+</body>
+</html>

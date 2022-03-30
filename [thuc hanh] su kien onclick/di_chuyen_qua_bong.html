@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>di chuyen qua bong</title>
+</head>
+<body>
+    <form>
+        <img id="quaBong" src="img/bong.png" alt="day la qua bong">
+        <p>Click button below to move the image to right</p>
+        <input onclick="diChuyen()" type="button" value="Click me">
+    </form>
+    <script>
+
+        let qua_bong = null;
+        qua_bong = document.getElementById('quaBong');
+        function bong() {
+
+            qua_bong.style.position = 'relative';
+            qua_bong.style.left = '0px';
+        }
+       function diChuyen() {
+           qua_bong.style.left = parseInt(qua_bong.style.left) + 200 +'px';
+           // console.log(qua_bong.style.left)
+       }
+        window.onload = bong;
+    </script>
+</body>
+</html>
